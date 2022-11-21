@@ -34,7 +34,7 @@ const main = async () => {
     }
     catch (_err) {
         const err = _err;
-        const msg = `ERROR - ${err.message}`;
+        const msg = `[${process.env.CODENAME}] ERROR - ${err.message}`;
         console.log(msg);
         await onError();
         await sendAlert(msg);

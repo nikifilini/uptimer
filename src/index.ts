@@ -32,7 +32,7 @@ const main = async () => {
     console.log(`OK - response code ${resp.status}`)
   } catch (_err) {
     const err: AxiosError = _err
-    const msg = `ERROR - ${err.message}`
+    const msg = `[${process.env.CODENAME}] ERROR - ${err.message}`
     console.log(msg)
     await onError()
     await sendAlert(msg)
